@@ -295,21 +295,21 @@ app.post("/getAliceBlueBroker", fetchuser, async (req, res) => {
     }
 
     // Check if user has added any brokers
-    if (!user.added_broker || user.added_broker.length === 0) {
-      return res.status(404).json({ error: "No brokers found" });
-    }
+    // if (!user.added_broker || user.added_broker.length === 0) {
+    //   return res.status(404).json({ error: "No brokers found" });
+    // }
 
     // Find the Alice-Blue broker
-    const aliceBlueBroker = user.added_broker.find(
-      (broker) => broker.name === "Alice-Blue"
-    );
+    // const aliceBlueBroker = user.added_broker.find(
+    //   (broker) => broker.name === "Alice-Blue"
+    // );
 
-    if (!aliceBlueBroker) {
-      return res.status(404).json({ error: "Alice-Blue broker not found" });
-    }
+    // if (!aliceBlueBroker) {
+    //   return res.status(404).json({ error: "Alice-Blue broker not found" });
+    // }
 
-    const apiKey = aliceBlueBroker.apiKey;
-    const loginId = aliceBlueBroker.loginId;
+    // const apiKey = aliceBlueBroker.apiKey;
+    // const loginId = aliceBlueBroker.loginId;
 
     // Define the path to the Python script
     const scriptPath = path.join(__dirname, 'python/main.py');
