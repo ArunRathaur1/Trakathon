@@ -1,0 +1,139 @@
+.hover-green{
+    background-color: rgba(220, 247, 227,0.6);
+}
+.hover-green:hover{
+    background-color: rgba(72, 255, 121, 0.6);
+}
+.hover-blue{
+    background-color: rgba(178, 180, 240,0.6);
+}
+.hover-blue:hover{
+    background-color: rgba(112, 116, 251, 0.6);
+}
+.Algoshoppingmain{
+    box-shadow: 1px 1px 5px black;
+    background-color: white;
+    transition: 0.3s;
+}
+.Algoshoppingmain:hover{
+    transform: scale(1.05);
+    box-shadow: 1px 1px 5px rgb(53, 32, 243);
+    background-color: rgba(184, 255, 253, 0.3)
+}
+.Algoshopping-share-button{
+    color: rgba(0, 0, 0, 0.59)
+}
+.Algoshopping-share-button:hover{
+    color:blue;
+}
+.Algoshopping-share-button:active{
+
+    color: rgba(1, 73, 66, 0.734);
+}
+.member_name{
+    width: 290px;
+    margin-left: -0px;
+    transition: .3s;
+}
+.member_name:hover{
+    width: 310px;
+    background-color: rgb(49, 209, 230);
+    scale:1.05;
+}
+.DashboardDetails{
+    scale: 1;
+    transition: 0.3s;
+}
+.DashboardDetails:hover{
+    scale: 1.05;
+    background-color: rgba(0, 0, 255, 0.197);
+}
+.DashboardDetails1{
+    scale: 1;
+    transition: 0.3s;
+}
+.DashboardDetails1:hover{
+    scale: 1.05;
+    background-color: rgba(0, 255, 0, 0.245);
+}
+.DashboardDetails2{
+    scale: 1;
+    transition: 0.3s;
+}
+.DashboardDetails2:hover{
+    scale: 1.05;
+    background-color: rgba(0, 255, 255, 0.356);
+}
+.Featuresbutton {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    width: 25%;
+    font-size: 23px;
+    color: blue;
+    background: linear-gradient(cyan, blue);
+    border-radius: 5px;
+    padding: 10px 20px;
+    overflow: hidden;
+    transition: 1s; /* Combine transitions */
+    animation: glowanimations 3s linear infinite; /* Fixed syntax */
+}
+
+.Featuresbutton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(blue, cyan);
+    transition: opacity 0.5s;
+    opacity: 0;
+    z-index: -1; /* Ensure it stays behind the text */
+}
+
+.Featuresbutton:hover::before {
+    opacity: 1;
+}
+
+.Featuresbutton span {
+    position: relative;
+    z-index: 1; /* Ensure text stays on top */
+}
+.Featuresbutton:hover{
+    scale: 1.05;
+}
+.Featuresbutton:active {
+    background-color: blue;
+    color: white;
+}
+
+@keyframes glowanimations {
+    0% {
+        box-shadow: 0 0 20px rgba(52, 52, 255, 0.668); /* Slight adjustment for smooth glow */
+    }
+    50% {
+        box-shadow: 0 0 20px black; /* Slight adjustment for smooth glow */
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(52, 52, 255, 0.668); /* Ensure the glow effect cycles smoothly */
+    }
+}
+.explorecourescard:hover{
+    box-shadow: 1px 1px 5px black;
+}
+@keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-0%);
+    }
+  }
+  
+  .carousel {
+    animation: scroll 20s linear infinite;
+  }
+  
