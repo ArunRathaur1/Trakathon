@@ -23,7 +23,7 @@ function AdminSignupstate(props){
     }
        async function SignUP(){
         if(key==="secretData"){
-            await fetch("http://localhost:5000/admin/signup", {
+            await fetch("https://trakathon.onrender.com/admin/signup", {
                 method: "POST",
                 body: JSON.stringify({
                     name: name,

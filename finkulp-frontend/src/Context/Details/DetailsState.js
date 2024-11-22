@@ -22,7 +22,7 @@ function DetailsState(props) {
 
   const getDetails = async () => {
     setLoading(true);
-    const url = "http://localhost:5000/auth/fetchuser";
+    const url = "https://trakathon.onrender.com/auth/fetchuser";
     const authToken = getTokenFromCookie();
     try {
       const response = await fetch(url, {
@@ -49,7 +49,7 @@ function DetailsState(props) {
   };
 
   const getAliceBlueBrokerDetails = async () => {
-    const url = "http://localhost:5000/notes/getAliceBlueBroker";
+    const url = "https://trakathon.onrender.com/notes/getAliceBlueBroker";
     const authToken = getTokenFromCookie();
 
     try {

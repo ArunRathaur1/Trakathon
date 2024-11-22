@@ -29,7 +29,7 @@ const SignUpState=(props)=>{
         console.log(password);
         console.log(number);
     
-        await fetch("http://localhost:5000/auth/", {
+        await fetch("https://trakathon.onrender.com/auth/", {
             method: "POST",
             body: JSON.stringify({
                 name: name,
