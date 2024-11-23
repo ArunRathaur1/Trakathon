@@ -153,9 +153,9 @@ const Footer = () => {
       </div>
         <div>
         <div style={{paddingLeft:'80px',paddingRight:'80px',fontSize:'12px'}}>
-        Finkulp Tech Consulting Services LLP ("Finkulp") warns that trading products on margin carries a significant risk of losses exceeding deposited funds, not suitable for all investors. Informational Purpose: Content provided is for informational purposes only, not an offer to sell or solicit investment.Investments in securities are subject to market risks arising from various factors, past performance does not guarantee future returns.
-No assurance or guarantee of achieving objectives or returns on investments provided.Investors are responsible for carefully reviewing all terms and conditions before subscribing, acknowledging the inherent market risks.
-        </div>
+        फिंकुल्प टेक कंसल्टिंग सर्विसेज एलएलपी ("फिंकुल्प") चेतावनी देती है कि मार्जिन पर उत्पादों का व्यापार करने से जमा की गई राशि से अधिक के नुकसान का जोखिम होता है, जो सभी निवेशकों के लिए उपयुक्त नहीं है। सूचना का उद्देश्य: प्रस्तुत सामग्री केवल सूचनात्मक उद्देश्यों के लिए है, यह बिक्री करने या निवेश को आमंत्रित करने का प्रस्ताव नहीं है। प्रतिभूतियों में निवेश विभिन्न कारणों से बाजार जोखिमों के अधीन होते हैं, और पिछले प्रदर्शन से भविष्य के रिटर्न की गारंटी नहीं मिलती। निवेशकों को सभी शर्तों और परिस्थितियों की सावधानीपूर्वक समीक्षा करने की जिम्मेदारी है, और उन्हें बाजार जोखिमों का स्वीकृति देनी चाहिए।
+</div>
+
         </div>
       </footer>
       </div>
