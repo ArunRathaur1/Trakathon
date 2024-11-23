@@ -7,9 +7,9 @@ const Navbar = () => {
     const [isDashboardDropdownOpen, setIsDashboardDropdownOpen] = useState(false);
 
     const linkStyle = {
-        color: 'black',
+        color: 'yellow',  // Changed to yellow text color
         textDecoration: 'none',
-        paddingTop:'10px',
+        paddingTop: '10px',
         fontSize: '15px',
         paddingLeft: '20px' 
     };
@@ -18,8 +18,8 @@ const Navbar = () => {
         color: 'white',
         textDecoration: 'none',
         fontSize: '15px',
-        paddingTop:'10px',
-        background:"blue",
+        paddingTop: '10px',
+        background: 'blue',
         paddingLeft: '20px' 
     };
 
@@ -37,7 +37,7 @@ const Navbar = () => {
     };
 
     return (
-        <header style={{ color: "black", width: '200px',paddingBottom:'50px' }}>
+        <header className="bg-gray-700" style={{ color: "yellow", width: '200px', paddingBottom: '50px' }}>
             <div>
                 <div className="relative items-center justify-between">
                     <div className="w-60 max-w-full px-4">
@@ -53,56 +53,56 @@ const Navbar = () => {
                     <div className="w-full">
                         <div className="block" style={{ gap: "30px" }}>
                             <div onClick={toggleDashboardDropdown} style={getLinkStyle('/loggedhome/Dashboard')}>
-                                <Link style={getLinkStyle('/loggedhome/Dashboard')}>Dashboard<span style={{paddingLeft:'10px'}}><i class="fa-solid fa-square-caret-down"></i></span></Link>
+                                <Link style={getLinkStyle('/loggedhome/Dashboard')}>डैशबोर्ड<span style={{ paddingLeft: '10px' }}><i className="fa-solid fa-square-caret-down"></i></span></Link>
                             </div>
                             {isDashboardDropdownOpen && (
                                 <div style={{ paddingLeft: '30px' }}>
                                     <div style={getLinkStyle('/loggedhome/Dashboard/MyStrategy')}>
-                                        <Link to='/loggedhome/Dashboard/MyStrategy' style={getLinkStyle('/loggedhome/Dashboard/MyStrategy')}>My Strategies</Link>
+                                        <Link to='/loggedhome/Dashboard/MyStrategy' style={getLinkStyle('/loggedhome/Dashboard/MyStrategy')}>मेरी रणनीतियाँ</Link>
                                     </div>
                                     <div style={getLinkStyle('/loggedhome/Dashboard/Trade')}>
-                                        <Link to='/loggedhome/Dashboard/Trade' style={getLinkStyle('/loggedhome/Dashboard/Trade')}>Trade History</Link>
+                                        <Link to='/loggedhome/Dashboard/Trade' style={getLinkStyle('/loggedhome/Dashboard/Trade')}>व्यापार इतिहास</Link>
                                     </div>
                                     <div style={getLinkStyle('/loggedhome/Dashboard')}>
-                                        <Link to='/loggedhome/Dashboard' style={getLinkStyle('/loggedhome/Dashboard')}>Details</Link>
+                                        <Link to='/loggedhome/Dashboard' style={getLinkStyle('/loggedhome/Dashboard')}>विवरण</Link>
                                     </div>
                                     <div style={getLinkStyle('/loggedhome/Dashboard/my-courses')}>
-                                        <Link to='/loggedhome/Dashboard/my-courses' style={getLinkStyle('/loggedhome/Dashboard/my-courses')}>My Courses</Link>
+                                        <Link to='/loggedhome/Dashboard/my-courses' style={getLinkStyle('/loggedhome/Dashboard/my-courses')}>मेरे पाठ्यक्रम</Link>
                                     </div>
                                 </div>
                             )}
                             <div style={getLinkStyle('/loggedhome/MarketPlace')}>
-                                <Link to='/loggedhome/MarketPlace' style={getLinkStyle('/loggedhome/MarketPlace')}>MarketPlace</Link>
+                                <Link to='/loggedhome/MarketPlace' style={getLinkStyle('/loggedhome/MarketPlace')}>बाजार</Link>
                             </div>
                             <div style={getLinkStyle('/loggedhome/Add-Broker')}>
-                                <Link to='/loggedhome/Add-Broker' style={getLinkStyle('/loggedhome/Add-Broker')}>Broking Partner</Link>
+                                <Link to='/loggedhome/Add-Broker' style={getLinkStyle('/loggedhome/Add-Broker')}>ब्रोकिंग साझेदार</Link>
                             </div>
                             <div style={getLinkStyle('/loggedhome/my_profile')}>
-                                <Link to='/loggedhome/my_profile' style={getLinkStyle('/loggedhome/my_profile')}>My Portfolio</Link>
+                                <Link to='/loggedhome/my_profile' style={getLinkStyle('/loggedhome/my_profile')}>मेरा पोर्टफोलियो</Link>
                             </div>
                             <div style={getLinkStyle('/loggedhome/Reports')}>
-                                <Link to='/loggedhome/Reports' style={getLinkStyle('/loggedhome/Reports')}>Reports</Link>
+                                <Link to='/loggedhome/Reports' style={getLinkStyle('/loggedhome/Reports')}>रिपोर्ट्स</Link>
                             </div>
                             <div style={getLinkStyle('/loggedhome/MySubscriptions')}>
-                                <Link to='/loggedhome/MySubscriptions' style={getLinkStyle('/loggedhome/MySubscriptions')}>My Subscriptions</Link>
+                                <Link to='/loggedhome/MySubscriptions' style={getLinkStyle('/loggedhome/MySubscriptions')}>मेरी सदस्यताएँ</Link>
                             </div>
                             <div style={getLinkStyle('/loggedhome/courses')}>
-                                <Link to='/loggedhome/courses' style={getLinkStyle('/loggedhome/courses')}>Courses</Link>
+                                <Link to='/loggedhome/courses' style={getLinkStyle('/loggedhome/courses')}>पाठ्यक्रम</Link>
                             </div>
                             <div style={getLinkStyle('/loggedhome/Resources')}>
-                                <Link to='/loggedhome/Resources' style={getLinkStyle('/loggedhome/Resources')}>Resources</Link>
+                                <Link to='/loggedhome/Resources' style={getLinkStyle('/loggedhome/Resources')}>संसाधन</Link>
                             </div>
                             <div style={getLinkStyle('/loggedhome/subscription')}>
-                                <Link to='/loggedhome/subscription' style={getLinkStyle('/loggedhome/subscription')}>Subscription</Link>
+                                <Link to='/loggedhome/subscription' style={getLinkStyle('/loggedhome/subscription')}>सदस्यता</Link>
                             </div>
                             <div style={getLinkStyle('/loggedhome/Checkout')}>
-                                <Link to='/loggedhome/Checkout' style={getLinkStyle('/loggedhome/Checkout')}>Orders</Link>
+                                <Link to='/loggedhome/Checkout' style={getLinkStyle('/loggedhome/Checkout')}>आदेश</Link>
                             </div>
                             <div style={getLinkStyle('/loggedhome/Setting')}>
-                                <Link to='/loggedhome/Setting' style={getLinkStyle('/loggedhome/Setting')}>Setting</Link>
+                                <Link to='/loggedhome/Setting' style={getLinkStyle('/loggedhome/Setting')}>सेटिंग</Link>
                             </div>
-                            <div className="rounded-lg bg-primary py-3 text-base font-medium text-white hover:bg-opacity-90" onClick={logout} style={{ width: '100px', textAlign: 'center',marginLeft:'20px'}}>
-                                <Link to='/'>Logout</Link>
+                            <div className="rounded-lg bg-primary py-3 text-base font-medium text-white hover:bg-opacity-90" onClick={logout} style={{ width: '100px', textAlign: 'center', marginLeft: '20px' }}>
+                                <Link to='/'>लॉग आउट</Link>
                             </div>
                         </div>
                     </div>

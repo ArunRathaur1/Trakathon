@@ -23,7 +23,7 @@ export default function Loggedin() {
   return (
     <>
       <div style={{ display: "flex", width: '100%' }}>
-      <div style={{width:'250px'}}>
+      <div className='bg-gray-700' style={{width:'250px'}}>
         <div style={{ position: 'sticky', top: '0', height: '100vh', overflowY: 'auto', borderRight: '1px solid #ccc' }}>
           <NevBar />
         </div>
