@@ -16,7 +16,7 @@ import ResourcesHome from "./Resources/ResourcesHome";
 import '../../CSS/Algoshopping.css';
 
 const Home = () => {
-  const words = ["Hello!", "Welcome to Finkulp!"];
+  const words = ["Hello!", "Welcome to Dhanrashi!"];
   const [currentWord, setCurrentWord] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);

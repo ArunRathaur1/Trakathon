@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import img from '../../Images/Logo.png';
+import img from './logo1.png';
 import { Link } from "react-router-dom";
 
 const Navbar = (props) => {
@@ -34,7 +34,7 @@ const Navbar = (props) => {
                                     src={img}
                                     alt="logo"
                                     className="w-full"
-                                    style={{ paddingTop: '20px' }}
+                                    style={{width:"100px"}}
                                 /></Link>
                             </a>
                         </div>
