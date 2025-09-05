@@ -29,7 +29,7 @@ const SignUpState=(props)=>{
         console.log(password);
         console.log(number);
     
-        await fetch("https://trakathon.onrender.com/auth/", {
+        await fetch("https://trakathon.vercel.app/auth/", {
             method: "POST",
             body: JSON.stringify({
                 name: name,

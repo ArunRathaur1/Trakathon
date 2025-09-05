@@ -28,7 +28,7 @@ export default function Checkout(props) {
     try {
       if (props.checkout.length !== 0) {
         for (const item of props.checkout) {
-          const response = await fetch("http://localhost:5000/notes/addStrategy", {
+          const response = await fetch("https://trakathon.vercel.app/notes/addStrategy", {
             method: "POST",
             body: JSON.stringify({
               strategy_name: item.Strategist,
@@ -56,7 +56,7 @@ export default function Checkout(props) {
     try {
       if (props.checkout.length !== 0) {
         for (const item of props.checkout) {
-          const response = await fetch("http://localhost:5000/notes//addStrategytouser", {
+          const response = await fetch("https://trakathon.vercel.app/notes//addStrategytouser", {
             method: "POST",
             body: JSON.stringify({
               addedStrategy:{

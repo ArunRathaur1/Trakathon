@@ -26,7 +26,7 @@ export default function AdminHome() {
             navigate('/'); // Redirect to home if no token
         }
         async function getDetails() {
-            const url = "http://localhost:5000/admin//fetchuser";
+            const url = "https://trakathon.vercel.app/admin//fetchuser";
             const authToken=getTokenFromCookie();
             try {
                 const response = await fetch(url, {

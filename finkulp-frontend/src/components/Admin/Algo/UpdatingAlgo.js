@@ -35,7 +35,7 @@ export default function Algoshopping(props) {
   useEffect(() => {
     async function getDetails() {
       setLoading(true);
-      const url = "http://localhost:5000/admin/getAllStrategyInfo";
+      const url = "https://trakathon.vercel.app/admin/getAllStrategyInfo";
       const authToken = getTokenFromCookie();
       try {
         const response = await fetch(url, {

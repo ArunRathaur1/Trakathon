@@ -57,7 +57,7 @@ export default function CreateNewAlgo() {
 
     async function AddtheStrategy() {
         setwait(true);
-        const checkurl = "http://localhost:5000/admin/checkStrategyName";
+        const checkurl = "https://trakathon.vercel.app/admin/checkStrategyName";
         const authToken = getTokenFromCookie();
     
         try {
@@ -92,7 +92,7 @@ export default function CreateNewAlgo() {
         }
 
 
-        const url = "http://localhost:5000/admin/addStrategyInfo";
+        const url = "https://trakathon.vercel.app/admin/addStrategyInfo";
 
         const formData = new FormData();
         formData.append('strategy_name', tradingStrategy.Strategist);

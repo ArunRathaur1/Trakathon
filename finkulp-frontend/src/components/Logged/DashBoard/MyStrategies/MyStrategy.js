@@ -79,7 +79,7 @@ export default function MyStrategy(props) {
       return;
     }
     try {
-      const response = await fetch("http://localhost:5000/notes/removeUserFromStrategy", {
+      const response = await fetch("https://trakathon.vercel.app/notes/removeUserFromStrategy", {
         method: "DELETE",
         body: JSON.stringify({
           strategy_name: algo.Strategist,
@@ -99,7 +99,7 @@ export default function MyStrategy(props) {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/notes/updatestrategystatus", {
+      const response = await fetch("https://trakathon.vercel.app/notes/updatestrategystatus", {
         method: "POST",
         body: JSON.stringify({
           strategyName: algo.Strategist,
@@ -128,7 +128,7 @@ export default function MyStrategy(props) {
       return;
     }
     try {
-      const response = await fetch("http://localhost:5000/notes/addStrategy", {
+      const response = await fetch("https://trakathon.vercel.app/notes/addStrategy", {
         method: "POST",
         body: JSON.stringify({
           strategy_name: algo.Strategist,
@@ -148,7 +148,7 @@ export default function MyStrategy(props) {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/notes/updatestrategystatus", {
+      const response = await fetch("https://trakathon.vercel.app/notes/updatestrategystatus", {
         method: "POST",
         body: JSON.stringify({
           strategyName: algo.Strategist,

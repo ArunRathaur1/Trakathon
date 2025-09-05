@@ -55,7 +55,7 @@ export default function UpdateAlgo(props) {
 
     async function AddtheStrategy() {
         setwait(true);
-        const url = "http://localhost:5000/admin/addStrategyInfo";
+        const url = "https://trakathon.vercel.app/admin/addStrategyInfo";
         const authToken = getTokenFromCookie();
 
         const formData = new FormData();

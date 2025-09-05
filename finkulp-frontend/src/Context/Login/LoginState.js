@@ -25,7 +25,7 @@ const LoginState=(props)=>{
     async function handlesubmit() {
         setwait(true);
     
-        await fetch("https://trakathon.onrender.com/auth/login", {
+        await fetch("https://trakathon.vercel.app/auth/login", {
             method: "POST",
             body: JSON.stringify({
                 email: email,

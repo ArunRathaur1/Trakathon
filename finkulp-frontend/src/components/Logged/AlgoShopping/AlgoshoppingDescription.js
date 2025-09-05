@@ -54,7 +54,7 @@ export default function AlgoshoppingDescription(props) {
       const algoWithoutImage = { ...algo };
       delete algoWithoutImage.image;
   
-      await fetch("http://localhost:5000/notes/addStrategy", {
+      await fetch("https://trakathon.vercel.app/notes/addStrategy", {
         method: "POST",
         body: JSON.stringify({
           strategy_name: algoWithoutImage.Strategist,
@@ -66,7 +66,7 @@ export default function AlgoshoppingDescription(props) {
         }
       });
   
-      await fetch("http://localhost:5000/notes/addStrategytouser", {
+      await fetch("https://trakathon.vercel.app/notes/addStrategytouser", {
         method: "POST",
         body: JSON.stringify({
           addedStrategy: {

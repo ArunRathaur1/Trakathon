@@ -10,7 +10,7 @@ function AdminLoginState(props) {
     const[key,setkey]=useState("");
     async function Login(){
         if(key==="secretData"){
-            await fetch("https://trakathon.onrender.com/admin/login", {
+            await fetch("https://trakathon.vercel.app/admin/login", {
                 method: "POST",
                 body: JSON.stringify({
                     email: email,

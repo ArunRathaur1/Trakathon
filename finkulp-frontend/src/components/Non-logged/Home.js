@@ -68,7 +68,7 @@ const Home = () => {
             <div style={{ width: "70%" }}>
               <div className="my-10" style={{ textAlign: 'center' }}>
                 <div className="mb-5 text-4xl font-bold !leading-[1.208] text-black dark:text-yellow-500 xl:text-5xl my-10" style={{ marginTop: "100px" }}>
-                  Empowering Rural Women for a Brighter Future
+                  Empowering Rural People for a Brighter Future
                 </div>
                 <div className="text-4xl font-bold text-black dark:text-yellow-200 xl:text-5xl" style={{ marginBottom: "30px", height: "30px" }}>
                   {currentWord}
