@@ -1,22 +1,21 @@
-const express=require('express');
-const user=require('../modles/auth');
-const bycrypt=require("bcryptjs");
-const jsonweb=require("jsonwebtoken");
-require('dotenv').config();
-const serect_data="This is very confidential"
-const fetchuser=require("../middleware/fetchuser");
-const app=express();
+const express = require("express");
+const user = require("../modles/auth");
+const bycrypt = require("bcryptjs");
+const jsonweb = require("jsonwebtoken"); // This is correctly imported
+require("dotenv").config();
+const serect_data = "This is very confidential";
+const fetchuser = require("../middleware/fetchuser");
+const app = express();
 
-
-//This is for creating a new user
-app.post('/', async (req, res) => {
+// This is for creating a new user
+app.post("/", async (req, res) => {
   try {
-    let success=false;
-    const { email, password, name,mobile } = req.body;
-
+    let success = false;
+    const { email, password, name, mobile } = req.body;
+    console.log(req.body);
     const existingUser = await user.findOne({ email: email });
     if (existingUser) {
-      return res.json({success:success})
+      return res.json({ success: success });
     }
 
     const hashedPassword = await bycrypt.hash(password, 10);
@@ -24,23 +23,22 @@ app.post('/', async (req, res) => {
       email: email,
       name: name,
       password: hashedPassword,
-      mobile:mobile
+      mobile: mobile,
     });
 
     await newUser.save();
-    const id=newUser._id;
+    const id = newUser._id;
     // Create a JWT token with only the user ID as payload
-    const token = jsonweb.sign({id:id}, serect_data);
-    success=true;
-    res.json({ authToken: token,success:success });
+    const token = jsonweb.sign({ id: id }, serect_data); // Use jsonweb here, not jwt
+    success = true;
+    res.json({ authToken: token, success: success });
   } catch (error) {
     console.error(error.message);
-    res.status(500).send('Server Error');
+    res.status(500).send("Server Error");
   }
 });
 
-
-// This is for  login a user
+// This is for login a user
 app.post("/login", async (req, res) => {
   const { email, password } = req.body;
 
@@ -48,16 +46,18 @@ app.post("/login", async (req, res) => {
     const findUser = await user.findOne({ email: email });
 
     if (!findUser) {
-      return res.status(404).send("User with this email does not exist in the database");
+      return res
+        .status(404)
+        .send("User with this email does not exist in the database");
     }
 
-    const isPasswordValid =  bycrypt.compare(password, findUser.password);
+    const isPasswordValid = await bycrypt.compare(password, findUser.password); // Added await here
 
     if (!isPasswordValid) {
       return res.status(401).send("Incorrect password");
     }
-    const id = findUser._id ; // Create a payload object with user ID
-    const token = jsonweb.sign({id:id}, serect_data);
+    const id = findUser._id; // Create a payload object with user ID
+    const token = jsonweb.sign({ id: id }, serect_data); // Use jsonweb here, not jwt
 
     res.json({ authToken: token, success: true });
   } catch (error) {
@@ -66,28 +66,26 @@ app.post("/login", async (req, res) => {
   }
 });
 
-
-
 // for getting the details of user
 app.post("/fetchuser", fetchuser, async (req, res) => {
   jsonweb.verify(req.token, serect_data, async (err, authData) => {
+    // Use jsonweb here, not jwt
     if (err) {
       res.status(403).send("Invalid token");
     } else {
       try {
-        const findUser = await user.findOne({ _id:authData.id });
+        const findUser = await user.findOne({ _id: authData.id });
         if (findUser) {
           res.json(findUser);
         } else {
           res.status(404).send("User not found");
         }
       } catch (error) {
-        console.error('Error querying database:', error.message);
+        console.error("Error querying database:", error.message);
         res.status(500).send("Server error");
       }
     }
   });
 });
 
-
-module.exports=app;
+module.exports = app;
